@@ -1,7 +1,7 @@
 # Livraria
 Sistema para gerenciamento de livros e quantidades.
 
-Aplicação feita em .NET Core 2.0
+Aplicação feita em MVC, em C#, utilizando o framework .NET Core 2.0
 
 API's utilizadas
 
