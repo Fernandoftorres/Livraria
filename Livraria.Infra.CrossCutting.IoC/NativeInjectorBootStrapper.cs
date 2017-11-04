@@ -28,21 +28,21 @@ namespace Livraria.Infra.CrossCutting.IoC
             // Application
             services.AddSingleton(Mapper.Configuration);
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<IConfigurationProvider>(), sp.GetService));
-            services.AddScoped<ICustomerAppService, CustomerAppService>();
+            services.AddScoped<ILivroAppService, LivroAppService>();
 
             // Domain - Events
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
-            services.AddScoped<INotificationHandler<CustomerRegisteredEvent>, CustomerEventHandler>();
-            services.AddScoped<INotificationHandler<CustomerUpdatedEvent>, CustomerEventHandler>();
-            services.AddScoped<INotificationHandler<CustomerRemovedEvent>, CustomerEventHandler>();
+            services.AddScoped<INotificationHandler<LivroRegisteredEvent>, LivroEventHandler>();
+            services.AddScoped<INotificationHandler<LivroUpdatedEvent>, LivroEventHandler>();
+            services.AddScoped<INotificationHandler<LivroRemovedEvent>, LivroEventHandler>();
 
             // Domain - Commands
-            services.AddScoped<INotificationHandler<RegisterNewCustomerCommand>, CustomerCommandHandler>();
-            services.AddScoped<INotificationHandler<UpdateCustomerCommand>, CustomerCommandHandler>();
-            services.AddScoped<INotificationHandler<RemoveCustomerCommand>, CustomerCommandHandler>();
+            services.AddScoped<INotificationHandler<RegisterNewLivroCommand>, LivroCommandHandler>();
+            services.AddScoped<INotificationHandler<UpdateLivroCommand>, LivroCommandHandler>();
+            services.AddScoped<INotificationHandler<RemoveLivroCommand>, LivroCommandHandler>();
 
             // Infra - Data
-            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<ILivroRepository, LivroRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<LivrariaContext>();
 

@@ -8,12 +8,10 @@ namespace Livraria.Infra.Data.Context
 {
     public class LivrariaContext : DbContext
     {
-        public DbSet<Customer> Customers { get; set; }
         public DbSet<Livro> Livros { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new CustomerMap());
             modelBuilder.ApplyConfiguration(new LivroMap());
                         
             base.OnModelCreating(modelBuilder);

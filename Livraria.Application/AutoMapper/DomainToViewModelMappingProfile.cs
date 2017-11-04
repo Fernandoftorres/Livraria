@@ -8,7 +8,7 @@ namespace Livraria.Application.AutoMapper
     {
         public DomainToViewModelMappingProfile()
         {
-            CreateMap<Customer, CustomerViewModel>();
+            CreateMap<Livro, LivroViewModel>();
         }
     }
 }

@@ -1,6 +1,6 @@
 using System;
 
-namespace Livraria.UI.SIte.Models
+namespace Livraria.UI.Site.Models
 {
     public class ErrorViewModel
     {

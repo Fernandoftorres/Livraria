@@ -1,31 +1,22 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Livraria.UI.SIte.Models;
-using Livraria.Application.Interfaces;
+using Livraria.UI.Site.Models;
 using MediatR;
 using Livraria.Domain.Core.Notifications;
 using Livraria.UI.Site.Controllers;
 
-namespace Livraria.UI.SIte.Controllers
+namespace Livraria.UI.Site.Controllers
 {
     public class HomeController : BaseController
     {
-        private readonly ICustomerAppService _customerAppService;
-
-        public HomeController(ICustomerAppService customerAppService,
-                                  INotificationHandler<DomainNotification> notifications) : base(notifications)
+        public HomeController(INotificationHandler<DomainNotification> notifications)
+            : base(notifications)
         {
-            _customerAppService = customerAppService;
-        }
+
+        }            
 
         public IActionResult Index()
         {
-            _customerAppService.Register(new Application.ViewModels.CustomerViewModel()
-            {
-                Email = "fernandoftorres@gmail.com",
-                BirthDate = new System.DateTime(1982,3,10),
-                Name ="Fernando Torres"
-            });
             return View();
 
         }

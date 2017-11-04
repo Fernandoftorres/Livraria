@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Livraria.UI.SIte": {
+    "Livraria.UI.Site": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
