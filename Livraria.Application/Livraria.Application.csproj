@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Livraria.Domain\Livraria.Domain.csproj" />
+    <ProjectReference Include="..\Livraria.Infra.Data\Livraria.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
